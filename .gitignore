@@ -1,0 +1,119 @@
+# ==============================================================================
+# TA-DPFL: Git Ignore Configuration
+# ==============================================================================
+
+# --- Python & Bytecode Cache ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- Virtual Environments ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# --- Testing & Quality Assurance ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+
+# --- Datasets & Large Data Files (>100MB / Raw Data) ---
+data/*.csv
+data/*.tsv
+data/*.parquet
+data/*.h5
+data/*.feather
+data/*.tar*
+data/HI-Small_Trans.csv
+
+# Keep lightweight data schemas, templates, and mappings
+!data/typology_annotations_template.csv
+!data/typology_annotations.csv
+!data/HI-Small_Patterns.txt
+
+# --- Model Checkpoints & Serialized Weights ---
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.joblib
+*.pkl
+*.pickle
+*.onnx
+
+# --- Large Archives & Bundles ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# --- Outputs & Experiment Artifacts ---
+outputs/checkpoints/
+outputs/logs/
+outputs/run_logs/
+outputs/privacy_reports/
+outputs/results/
+outputs/**/*.pt
+outputs/**/*.joblib
+outputs/**/*.png
+outputs/**/*.pdf
+outputs/**/*.svg
+outputs/**/*.csv
+outputs/**/checkpoints/
+outputs/**/logs/
+
+# Preserve top-level audit definitions and core manifests in outputs
+!outputs/README.md
+!outputs/*.json
+!outputs/**/data_audit.json
+
+# --- Temporary & Scratch Files ---
+*.tmp
+*.temp
+temp.txt
+*.bak
+*.backup.*
+*.swp
+*~
+scratch/
+
+# --- OS & Editor Metadata ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace

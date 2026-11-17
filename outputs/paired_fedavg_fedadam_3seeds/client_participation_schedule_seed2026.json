@@ -1,0 +1,9 @@
+{
+  "method": "balanced_random_permutation_blocks",
+  "seed": 2026,
+  "rounds": 3200,
+  "eligible_clients": 256,
+  "clients_per_round": 4,
+  "appearances_per_client": 50,
+  "privacy_status": "non_private_diagnostic_only"
+}

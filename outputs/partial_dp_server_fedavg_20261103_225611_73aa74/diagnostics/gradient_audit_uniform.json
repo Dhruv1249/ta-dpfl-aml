@@ -1,0 +1,65 @@
+{
+  "diagnostic": "noise_free_per_example_gradient_direction_audit",
+  "warning": "Local mechanism diagnostic only. It is not a DP run, not a privacy proof, and not an evaluation result. It uses sampled TRAIN rows and writes only aggregate statistics.",
+  "config": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\configs\\partial_dp_server_fedavg_20261103_225611_73aa74.yaml",
+  "checkpoint": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\outputs\\partial_dp_server_fedavg_20261103_225611_73aa74\\checkpoints\\uniform_dp_fl_seed2026.pt",
+  "method": "uniform",
+  "seed": 2026,
+  "device": "cuda",
+  "training_rows": 3046861,
+  "training_positive_rows": 2297,
+  "training_background_rows": 3044564,
+  "feature_count": 53,
+  "label_group_mismatches_full_frame": 0,
+  "label_group_mismatches_training": 0,
+  "declared_positive_groups": [
+    "BIPARTITE",
+    "CYCLE",
+    "FAN-IN",
+    "FAN-OUT",
+    "GATHER-SCATTER",
+    "RANDOM",
+    "SCATTER-GATHER",
+    "STACK",
+    "UNCL"
+  ],
+  "clip_norm": 1.0,
+  "normalization": 128.0,
+  "learning_rate": 0.001,
+  "sampled_diagnostic_rows_per_class": 128,
+  "class_diagnostics": {
+    "positive": {
+      "sample_count": 128,
+      "mean_loss_before": 1.747469425201416,
+      "mean_loss_after_noise_free_step": 1.7423352003097534,
+      "loss_reduction": 0.005134224891662598,
+      "mean_logit_before": -1.5442681312561035,
+      "mean_logit_after_noise_free_step": -1.5380910634994507,
+      "mean_logit_change": 0.006177067756652832,
+      "mean_raw_gradient_norm": 5.443952648900449,
+      "fraction_examples_clipped": 1.0,
+      "mean_clipped_gradient_norm": 0.9698317050933838,
+      "update_was_loss_improving": true
+    },
+    "background": {
+      "sample_count": 128,
+      "mean_loss_before": 0.28032946586608887,
+      "mean_loss_after_noise_free_step": 0.27946218848228455,
+      "loss_reduction": 0.0008672773838043213,
+      "mean_logit_before": -1.2419071197509766,
+      "mean_logit_after_noise_free_step": -1.2464122772216797,
+      "mean_logit_change": -0.004505157470703125,
+      "mean_raw_gradient_norm": 1.0533370091579854,
+      "fraction_examples_clipped": 0.7109375,
+      "mean_clipped_gradient_norm": 0.8868852257728577,
+      "update_was_loss_improving": true
+    }
+  },
+  "interpretation_checks": {
+    "label_group_mapping_consistent": true,
+    "positive_step_reduces_positive_loss": true,
+    "background_step_reduces_background_loss": true,
+    "positive_step_raises_positive_logit": true,
+    "background_step_lowers_background_logit": true
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "status": "PROVISIONAL_REQUIRES_SUPERVISOR_OR_AML_DOMAIN_REVIEW",
+  "source": "Proposed implementation choices discussed with the user; not numerical values specified by the uploaded paper.",
+  "delta": 1e-8,
+  "epsilon_uniform": 4.0,
+  "epsilon_min": 2.0,
+  "epsilon_max": 4.0,
+  "policy_d_positive_target_rule": "epsilon_min + (epsilon_max - epsilon_min) * relevance_score",
+  "policy_d_background_target": 2.0,
+  "relevance_scores": {
+    "CYCLE": 1.0,
+    "GATHER-SCATTER": 0.9,
+    "BIPARTITE": 0.8,
+    "FAN-OUT": 0.7,
+    "SCATTER-GATHER": 1.0,
+    "STACK": 0.8,
+    "RANDOM": 0.5,
+    "FAN-IN": 0.7,
+    "UNCL": 0.5
+  },
+  "relevance_score_max": 1.0,
+  "lambda_exploration": 0.2,
+  "eta": 0.01,
+  "q_focus": 0.05,
+  "q_background": 0.001,
+  "q_uniform": 0.001,
+  "clip_norm": 1.0,
+  "fixed_normalization_B0": 128.0,
+  "rdp_orders": [2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 96, 128],
+  "privacy_matching_tolerance": 0.02,
+  "regime_a_requirements": {
+    "max_relevance_score_equals_1": true,
+    "epsilon_max_equals_epsilon_uniform": true,
+    "all_record_strata_including_BG_must_be_accounted": true,
+    "comparison_must_be_relabelled_frontier_if_actual_max_epsilon_does_not_match": true
+  },
+  "approval": {
+    "privacy_targets_approved": false,
+    "relevance_scores_approved_by_aml_reviewer": false,
+    "approval_required_before_primary_claim": true
+  },
+  "interpretation_warning": "The scores are a proposed structural-priority rubric, not criminal probabilities or established AML risk rankings. Do not describe them as expert-validated until they have been reviewed and approved."
+}

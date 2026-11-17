@@ -1,0 +1,23 @@
+{
+  "privacy_unit": "one transaction record under add/remove adjacency",
+  "ownership": "each record is assigned to exactly one fixed public virtual client",
+  "client_participation_seed": 2026,
+  "client_participation_is_public_and_data_independent": true,
+  "client_subsampling_amplification_credited": false,
+  "positive_record_accounting": "compose only focus steps at the owning client where the public focus schedule equals the record's fixed typology",
+  "background_record_accounting": "compose q_background Gaussian mechanisms at every active step of its owning client, using that step's focus-group noise multiplier",
+  "one_combined_noise_vector_for_focus_plus_background": true,
+  "fixed_normalization": 128.0,
+  "composition_repetitions_per_method": 1,
+  "opacus_rdp_validation": {
+    "status": "PASS",
+    "max_absolute_difference": 1.4210854715202004e-14,
+    "comparisons": 12,
+    "tolerance": 1e-05
+  },
+  "raw_training_loss_and_realized_sample_counts_logged": false,
+  "formal_privacy_claim_permitted": false,
+  "claim_readiness": "candidate mechanism/accounting; independent end-to-end review required before making a formal DP claim",
+  "claim_scope": "training-record mechanism only; validation/test records and any separately published raw dataset audit are outside this training DP guarantee",
+  "joint_release_warning": "Each method is calibrated to its own matched cap across its configured seeds. If checkpoints from multiple DP methods are released together, their privacy losses compose; consult joint_release_all_enabled_dp_methods_and_seeds."
+}

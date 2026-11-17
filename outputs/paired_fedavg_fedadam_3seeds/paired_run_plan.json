@@ -1,0 +1,46 @@
+{
+  "source_config": "configs\\fedadam_partial4_3200x1.yaml",
+  "output_config": "configs\\paired_fedavg_fedadam_3seeds.yaml",
+  "output_dir": "outputs\\paired_fedavg_fedadam_3seeds",
+  "methods": [
+    "FedAvg",
+    "FedAdam"
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "federation": {
+    "virtual_clients": 256,
+    "clients_per_round": 4,
+    "rounds": 3200,
+    "local_steps_per_round": 1,
+    "batch_size": 1024,
+    "aggregation": "uniform"
+  },
+  "local_optimizer": {
+    "name": "SGD",
+    "learning_rate": 0.001
+  },
+  "server_optimizer": {
+    "name": "FedAdam",
+    "learning_rate": 0.001,
+    "beta1": 0.9,
+    "beta2": 0.99,
+    "tau": 1e-08
+  },
+  "pairing": {
+    "initialization": "same within each seed",
+    "client_schedule": "same within each seed; schedule seed equals experiment seed",
+    "sampled_batches": "same within each seed/method pair; sample-index SHA-256 fingerprints logged"
+  },
+  "expected_training_log_rows": 19200,
+  "expected_client_log_rows": 76800,
+  "privacy_status": "non_private_diagnostic_only; no DP claim",
+  "cautions": [
+    "Virtual clients are deterministic groups of source IDs, not 256 actual institutions.",
+    "The four-client participation protocol is a non-private diagnostic; partial-participation DP accounting is not implemented.",
+    "Sample-index hashes are local audit metadata, not a DP release."
+  ]
+}

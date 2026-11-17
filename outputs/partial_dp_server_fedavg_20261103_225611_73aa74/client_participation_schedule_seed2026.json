@@ -1,0 +1,10 @@
+{
+  "method": "balanced_random_permutation_blocks",
+  "seed": 2026,
+  "rounds": 3200,
+  "eligible_clients": 256,
+  "clients_per_round": 4,
+  "appearances_per_client": 50,
+  "schedule_is_public_and_data_independent": true,
+  "privacy_status": "used_by_partial_record_level_accountant"
+}

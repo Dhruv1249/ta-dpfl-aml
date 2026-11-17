@@ -1,0 +1,124 @@
+{
+  "status": "PASS",
+  "privacy_status": "non_private_diagnostic_only; no DP guarantee",
+  "methods": [
+    "FedAvg",
+    "FedAdam"
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "schedule_checks": [
+    {
+      "seed": 2026,
+      "schedule_rows": 12800,
+      "clients": 256,
+      "appearances_per_client": 50,
+      "rounds": 3200
+    },
+    {
+      "seed": 2027,
+      "schedule_rows": 12800,
+      "clients": 256,
+      "appearances_per_client": 50,
+      "rounds": 3200
+    },
+    {
+      "seed": 2028,
+      "schedule_rows": 12800,
+      "clients": 256,
+      "appearances_per_client": 50,
+      "rounds": 3200
+    }
+  ],
+  "initialization_pairing": [
+    {
+      "seed": 2026,
+      "same_initial_model": true,
+      "sha256": "5bc12158b17f45aa9949a200f90438ee6ec4ca4f39a1d86bcf1e60759a6ebd13"
+    },
+    {
+      "seed": 2027,
+      "same_initial_model": true,
+      "sha256": "0438d187748fee24177ef554dff8ba936d7212bc828d3e3ad1270d1d915d2511"
+    },
+    {
+      "seed": 2028,
+      "same_initial_model": true,
+      "sha256": "2f1b35994d26f14d6e76c78ab791c2535a096ef9bd69f414d84403044a9a90e7"
+    }
+  ],
+  "sampled_batch_pairing": [
+    {
+      "seed": 2026,
+      "paired_client_rounds": 12800,
+      "identical_sample_hashes": 12800,
+      "all_batches_identical": true
+    },
+    {
+      "seed": 2027,
+      "paired_client_rounds": 12800,
+      "identical_sample_hashes": 12800,
+      "all_batches_identical": true
+    },
+    {
+      "seed": 2028,
+      "paired_client_rounds": 12800,
+      "identical_sample_hashes": 12800,
+      "all_batches_identical": true
+    }
+  ],
+  "run_checks": [
+    {
+      "method": "FedAvg",
+      "seed": 2026,
+      "rounds": 3200,
+      "client_rows": 12800,
+      "sampled_records": 13092150
+    },
+    {
+      "method": "FedAdam",
+      "seed": 2026,
+      "rounds": 3200,
+      "client_rows": 12800,
+      "sampled_records": 13092150
+    },
+    {
+      "method": "FedAvg",
+      "seed": 2027,
+      "rounds": 3200,
+      "client_rows": 12800,
+      "sampled_records": 13092150
+    },
+    {
+      "method": "FedAdam",
+      "seed": 2027,
+      "rounds": 3200,
+      "client_rows": 12800,
+      "sampled_records": 13092150
+    },
+    {
+      "method": "FedAvg",
+      "seed": 2028,
+      "rounds": 3200,
+      "client_rows": 12800,
+      "sampled_records": 13092150
+    },
+    {
+      "method": "FedAdam",
+      "seed": 2028,
+      "rounds": 3200,
+      "client_rows": 12800,
+      "sampled_records": 13092150
+    }
+  ],
+  "summary_files": [
+    "multi_seed_metric_summary.csv",
+    "paired_metric_differences.csv",
+    "paired_metric_difference_summary.csv",
+    "multi_seed_typology_summary.csv"
+  ],
+  "interpretation": "Pairing is verified by identical initial-state fingerprints and per-client-round sampled-index hashes within each seed. This is a reproducibility audit, not a DP release or a statistical significance test."
+}

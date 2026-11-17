@@ -1,0 +1,104 @@
+# ==============================================================================
+# TA-DPFL: Master Experiment Configuration (Final Benchmark Settled Setup)
+# ==============================================================================
+
+seed: 2026
+output_dir: outputs
+
+hardware:
+  device: cuda
+  cpu_threads: 6
+  gradient_microbatch_size: 16
+  evaluation_batch_size: 8192
+
+data:
+  path: data/HI-Small_Trans.csv
+  annotations_path: data/typology_annotations.csv
+  allow_all_uncl: false
+  train_end_timestamp: "2022-09-06T13:36:00+00:00"
+  validation_end_timestamp: "2022-09-08T16:12:00+00:00"
+  train_fraction: 0.60
+  validation_fraction: 0.20
+  feature_hash_dim: 16
+  columns:
+    timestamp: Timestamp
+    client: From Bank
+    amount_received: Amount Received
+    amount_paid: Amount Paid
+    receiving_currency: Receiving Currency
+    payment_currency: Payment Currency
+    payment_format: Payment Format
+    label: Is Laundering
+    typology: null
+
+model:
+  architecture: MLP
+  hidden_dims: [128, 64]
+  activation: ReLU
+  prior_bias: -7.1947  # log(pi / (1 - pi)) for pi = 0.000753 (balances gradient force)
+
+federated:
+  rounds: 3200
+  clients_per_round: 4
+  virtual_clients: 256
+  local_steps_per_round: 1
+  learning_rate: 0.001
+  batch_size: 128
+  partition_mode: virtual
+  aggregation_mode: uniform
+  # Server-Side FedAdam (DP Post-Processing Property)
+  server_optimizer: fedadam
+  server_learning_rate: 0.01
+  server_beta1: 0.9
+  server_beta2: 0.99
+  server_tau: 1.0e-4
+
+privacy:
+  unit: transaction
+  adjacency: add_remove
+  delta: 1.0e-8
+  clip_norm: 1.0
+  normalization: 128.0
+  
+  # Sampling Probabilities
+  q_focus: 0.05
+  q_background: 0.001
+  q_uniform: 0.001
+  
+  # Privacy Targets & Calibrated Noise Multipliers
+  uniform_dp:
+    epsilon: 4.0
+    sigma: 0.6284465
+  
+  policy_u:
+    epsilon: 4.0
+    sigma_focus: 0.8500
+    sigma_background: 0.8500
+  
+  policy_d:
+    epsilon_min: 2.0
+    epsilon_max: 4.0
+    epsilon_background: 2.0
+    sigma: 1.1500
+  
+  individualized_dp:
+    epsilon_min: 2.0
+    epsilon_max: 4.0
+    sigma_avg: 0.9500
+
+  # Typology Exposure Scheduling
+  lambda_exploration: 0.20
+  eta: 0.01
+  relevance_scores:
+    CYCLE: 1.00
+    GATHER-SCATTER: 0.90
+    BIPARTITE: 0.80
+    FAN-OUT: 0.70
+    SCATTER-GATHER: 1.00
+    STACK: 0.80
+    RANDOM: 0.50
+    FAN-IN: 0.70
+    UNCL: 0.50
+
+  alpha_orders: [2, 3, 4, 5, 6, 8, 10, 12, 16, 20, 24, 32, 40, 48, 64, 96, 128]
+  require_opacus_validation: true

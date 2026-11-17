@@ -1,0 +1,630 @@
+{
+  "run_dir": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\outputs\\partial_dp_server_fedavg_20261103_225611_73aa74",
+  "config": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\configs\\partial_dp_server_fedavg_20261103_225611_73aa74.yaml",
+  "checks": {
+    "all_overall_ap_at_or_above_prevalence": false,
+    "all_raw_auc_at_or_above_half": false,
+    "single_seed_only": true,
+    "typology_rows_all_auc_below_half": true,
+    "typology_rows_all_ap_below_stratum_prevalence": true,
+    "all_methods_have_expected_rounds": true,
+    "all_rounds_have_expected_client_count": true,
+    "server_optimizer_matches_config": true,
+    "raw_private_losses_and_sample_counts_not_logged": true,
+    "focus_schedule_length_matches_rounds": true,
+    "focus_count_sum_matches_rounds": true,
+    "focus_schedule_is_public_label_independent": true,
+    "all_clients_exactly_expected_appearances": true,
+    "per_method_privacy_caps_matched": true,
+    "opacus_rdp_crosscheck_passed": true,
+    "formal_dp_certification_available": false
+  },
+  "metrics": {
+    "overall_test": [
+      {
+        "method": "Uniform-DP-FL",
+        "seed": 2026,
+        "n": 1015882,
+        "positives": 1798,
+        "prevalence": 0.0017698905975300282,
+        "AP": 0.0011089138081553788,
+        "AP_over_prevalence": 0.6265437025898234,
+        "ROC_AUC": 0.275229065114996,
+        "diagnostic_inverted_AUC": 0.724770934885004,
+        "precision": 0.00026048450117218026,
+        "recall": 0.0011123470522803114,
+        "F1": 0.00042211903756859433,
+        "false_positive_rate": 0.007569392673585226,
+        "global_epsilon": 4.0000000000000036,
+        "delta": 1e-08
+      },
+      {
+        "method": "TA-DPFL-Policy-U",
+        "seed": 2026,
+        "n": 1015882,
+        "positives": 1798,
+        "prevalence": 0.0017698905975300282,
+        "AP": 0.0011089409399011616,
+        "AP_over_prevalence": 0.6265590322072702,
+        "ROC_AUC": 0.27524410496230706,
+        "diagnostic_inverted_AUC": 0.7247558950376929,
+        "precision": 0.0002591680704937152,
+        "recall": 0.0011123470522803114,
+        "F1": 0.00042038885969521806,
+        "false_positive_rate": 0.0076078510261477356,
+        "global_epsilon": 4.0,
+        "delta": 1e-08
+      }
+    ],
+    "typology_rows": [
+      {
+        "typology": "CYCLE",
+        "method": "Uniform-DP-FL",
+        "n": 1014193,
+        "positives": 109,
+        "prevalence": 0.0001074746128202423,
+        "AP": 6.452361932233897e-05,
+        "ROC_AUC": 0.21227763047622605
+      },
+      {
+        "typology": "GATHER-SCATTER",
+        "method": "Uniform-DP-FL",
+        "n": 1014485,
+        "positives": 401,
+        "prevalence": 0.0003952744495975791,
+        "AP": 0.00024038714723755253,
+        "ROC_AUC": 0.23433613358535693
+      },
+      {
+        "typology": "BIPARTITE",
+        "method": "Uniform-DP-FL",
+        "n": 1014158,
+        "positives": 74,
+        "prevalence": 7.29669341463559e-05,
+        "AP": 4.4628576189896285e-05,
+        "ROC_AUC": 0.24011051326096236
+      },
+      {
+        "typology": "FAN-OUT",
+        "method": "Uniform-DP-FL",
+        "n": 1014224,
+        "positives": 140,
+        "prevalence": 0.00013803656785877676,
+        "AP": 8.33048175047804e-05,
+        "ROC_AUC": 0.21595751155018436
+      },
+      {
+        "typology": "SCATTER-GATHER",
+        "method": "Uniform-DP-FL",
+        "n": 1014336,
+        "positives": 252,
+        "prevalence": 0.00024843838727995455,
+        "AP": 0.00014668079625938156,
+        "ROC_AUC": 0.20880789367312672
+      },
+      {
+        "typology": "STACK",
+        "method": "Uniform-DP-FL",
+        "n": 1014224,
+        "positives": 140,
+        "prevalence": 0.00013803656785877676,
+        "AP": 8.293496941326235e-05,
+        "ROC_AUC": 0.22123783983518974
+      },
+      {
+        "typology": "RANDOM",
+        "method": "Uniform-DP-FL",
+        "n": 1014170,
+        "positives": 86,
+        "prevalence": 8.479840657877871e-05,
+        "AP": 5.220289999557505e-05,
+        "ROC_AUC": 0.2431810382571858
+      },
+      {
+        "typology": "FAN-IN",
+        "method": "Uniform-DP-FL",
+        "n": 1014221,
+        "positives": 137,
+        "prevalence": 0.00013507904095852875,
+        "AP": 8.615009828083354e-05,
+        "ROC_AUC": 0.26405013253195997
+      },
+      {
+        "typology": "UNCL",
+        "method": "Uniform-DP-FL",
+        "n": 1014543,
+        "positives": 459,
+        "prevalence": 0.00045242044940431306,
+        "AP": 0.00035407294620005665,
+        "ROC_AUC": 0.41191994326631387
+      },
+      {
+        "typology": "CYCLE",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014193,
+        "positives": 109,
+        "prevalence": 0.0001074746128202423,
+        "AP": 6.452989095396675e-05,
+        "ROC_AUC": 0.2123373128455168
+      },
+      {
+        "typology": "GATHER-SCATTER",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014485,
+        "positives": 401,
+        "prevalence": 0.0003952744495975791,
+        "AP": 0.000240389682946494,
+        "ROC_AUC": 0.23433198994931445
+      },
+      {
+        "typology": "BIPARTITE",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014158,
+        "positives": 74,
+        "prevalence": 7.29669341463559e-05,
+        "AP": 4.4630985986231915e-05,
+        "ROC_AUC": 0.2401288429435506
+      },
+      {
+        "typology": "FAN-OUT",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014224,
+        "positives": 140,
+        "prevalence": 0.00013803656785877676,
+        "AP": 8.331272950025738e-05,
+        "ROC_AUC": 0.21603438599338348
+      },
+      {
+        "typology": "SCATTER-GATHER",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014336,
+        "positives": 252,
+        "prevalence": 0.00024843838727995455,
+        "AP": 0.00014668237420821284,
+        "ROC_AUC": 0.20880465554871225
+      },
+      {
+        "typology": "STACK",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014224,
+        "positives": 140,
+        "prevalence": 0.00013803656785877676,
+        "AP": 8.293882798956288e-05,
+        "ROC_AUC": 0.22127118449471922
+      },
+      {
+        "typology": "RANDOM",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014170,
+        "positives": 86,
+        "prevalence": 8.479840657877871e-05,
+        "AP": 5.220487994438466e-05,
+        "ROC_AUC": 0.24318916794471315
+      },
+      {
+        "typology": "FAN-IN",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014221,
+        "positives": 137,
+        "prevalence": 0.00013507904095852875,
+        "AP": 8.615995218762187e-05,
+        "ROC_AUC": 0.26413543838361536
+      },
+      {
+        "typology": "UNCL",
+        "method": "TA-DPFL-Policy-U",
+        "n": 1014543,
+        "positives": 459,
+        "prevalence": 0.00045242044940431306,
+        "AP": 0.00035405302660844744,
+        "ROC_AUC": 0.41190652441428866
+      }
+    ],
+    "training_by_method": [
+      {
+        "method": "TA-DPFL-Policy-U",
+        "rows": 3200,
+        "unique_rounds": 3200,
+        "min_round": 1,
+        "max_round": 3200,
+        "server_optimizer": [
+          "fedavg"
+        ],
+        "clients_per_round_values": [
+          4
+        ],
+        "mean_aggregated_delta_l2": 0.0005136834792829844,
+        "mean_server_update_l2": 0.0005136834792829844
+      },
+      {
+        "method": "Uniform-DP-FL",
+        "rows": 3200,
+        "unique_rounds": 3200,
+        "min_round": 1,
+        "max_round": 3200,
+        "server_optimizer": [
+          "fedavg"
+        ],
+        "clients_per_round_values": [
+          4
+        ],
+        "mean_aggregated_delta_l2": 0.0003187899446791509,
+        "mean_server_update_l2": 0.0003187899446791509
+      }
+    ],
+    "configured_server_optimizer": "fedavg",
+    "focus_step_counts": {
+      "CYCLE": 441,
+      "GATHER-SCATTER": 404,
+      "BIPARTITE": 368,
+      "FAN-OUT": 331,
+      "SCATTER-GATHER": 441,
+      "STACK": 368,
+      "RANDOM": 258,
+      "FAN-IN": 331,
+      "UNCL": 258
+    },
+    "virtual_client_count": 256,
+    "expected_appearances_per_client": 50.0,
+    "client_focus_exposure_by_typology": {
+      "BIPARTITE": {
+        "min": 0,
+        "median": 6.0,
+        "max": 14,
+        "clients_zero": 1
+      },
+      "CYCLE": {
+        "min": 1,
+        "median": 7.0,
+        "max": 14,
+        "clients_zero": 0
+      },
+      "FAN-IN": {
+        "min": 1,
+        "median": 5.0,
+        "max": 15,
+        "clients_zero": 0
+      },
+      "FAN-OUT": {
+        "min": 1,
+        "median": 5.0,
+        "max": 11,
+        "clients_zero": 0
+      },
+      "GATHER-SCATTER": {
+        "min": 1,
+        "median": 6.0,
+        "max": 13,
+        "clients_zero": 0
+      },
+      "RANDOM": {
+        "min": 0,
+        "median": 4.0,
+        "max": 10,
+        "clients_zero": 1
+      },
+      "SCATTER-GATHER": {
+        "min": 1,
+        "median": 7.0,
+        "max": 14,
+        "clients_zero": 0
+      },
+      "STACK": {
+        "min": 1,
+        "median": 5.0,
+        "max": 13,
+        "clients_zero": 0
+      },
+      "UNCL": {
+        "min": 0,
+        "median": 4.0,
+        "max": 10,
+        "clients_zero": 3
+      }
+    }
+  },
+  "privacy": {
+    "regime_a_setup_satisfied": true,
+    "matched_maximum_privacy_cap_per_method": true,
+    "per_method_epsilon": {
+      "uniform_dp": 4.0000000000000036,
+      "individualized_dp": 4.0000000000000036,
+      "ta_policy_u": 4.0,
+      "ta_policy_d": 4.00000000000006
+    },
+    "joint_release": {
+      "global_epsilon_joint_release": 4.31586385120953,
+      "worst_record_location": {
+        "client_id": "VC0013",
+        "stratum": "FAN-IN",
+        "best_order": 6
+      },
+      "delta": 1e-08,
+      "orders": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        10,
+        12,
+        16,
+        20,
+        24,
+        32,
+        40,
+        48,
+        64,
+        96,
+        128
+      ],
+      "number_of_composed_methods": 2,
+      "warning": "This is the bound for releasing all listed method outputs together; it is not the per-method comparison bound."
+    },
+    "interpretation": "Per-method matched-cap comparison",
+    "privacy_unit": "one transaction record under add/remove adjacency",
+    "adjacency_owner_assumption": "each record is assigned to exactly one fixed public virtual client",
+    "fixed_normalization": 128.0,
+    "opacus_rdp_validation": {
+      "status": "PASS",
+      "max_absolute_difference": 1.4210854715202004e-14,
+      "comparisons": 12,
+      "tolerance": 1e-05
+    },
+    "formal_privacy_claim_permitted": false,
+    "claim_scope": "training-record mechanism only; validation/test records and any separately published raw dataset audit are outside this training DP guarantee",
+    "joint_release_warning": "Each method is calibrated to its own matched cap across its configured seeds. If checkpoints from multiple DP methods are released together, their privacy losses compose; consult joint_release_all_enabled_dp_methods_and_seeds."
+  },
+  "diagnostics": {
+    "preflight": {
+      "status": "PASS",
+      "rounds": 3200,
+      "clients_per_round": 4,
+      "appearances_per_client": 50,
+      "independent_rdp_validation": {
+        "status": "PASS",
+        "max_absolute_difference": 1.4210854715202004e-14,
+        "comparisons": 12,
+        "tolerance": 1e-05
+      },
+      "accountant_calibration_status": "PASS",
+      "target_satisfied": {
+        "uniform_dp": true,
+        "individualized_dp": true,
+        "ta_policy_u": true,
+        "ta_policy_d": true
+      },
+      "joint_release": {
+        "global_epsilon_joint_release": 4.31586385120953,
+        "worst_record_location": {
+          "client_id": "VC0013",
+          "stratum": "FAN-IN",
+          "best_order": 6
+        },
+        "delta": 1e-08,
+        "orders": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          8,
+          10,
+          12,
+          16,
+          20,
+          24,
+          32,
+          40,
+          48,
+          64,
+          96,
+          128
+        ],
+        "number_of_composed_methods": 2,
+        "warning": "This is the bound for releasing all listed method outputs together; it is not the per-method comparison bound."
+      }
+    },
+    "noise_floor_scale_check": [
+      {
+        "method": "Uniform-DP-FL",
+        "parameter_count": 15233,
+        "mean_noise_multiplier": 0.6284465063750917,
+        "noise_only_expected_aggregate_update_l2_approx": 0.0003029849607625883,
+        "observed_mean_aggregate_client_delta_l2": 0.0003187899446791509,
+        "observed_to_noise_only_ratio": 1.0521642522347734,
+        "assumptions": "one local DP step per client per round; independent Gaussian client noises; uniform mean over K clients; reported model checkpoint parameter count; asymptotic L2 RMS approximation"
+      },
+      {
+        "method": "TA-DPFL-Policy-U",
+        "parameter_count": 15233,
+        "mean_noise_multiplier": 1.0439917854132506,
+        "noise_only_expected_aggregate_update_l2_approx": 0.0005033265471780738,
+        "observed_mean_aggregate_client_delta_l2": 0.0005136834792829844,
+        "observed_to_noise_only_ratio": 1.020576963728572,
+        "assumptions": "one local DP step per client per round; independent Gaussian client noises; uniform mean over K clients; reported model checkpoint parameter count; asymptotic L2 RMS approximation"
+      }
+    ],
+    "validation_score_direction": [
+      {
+        "method": "Uniform-DP-FL",
+        "validation_n": 1015602,
+        "validation_positives": 1082,
+        "validation_prevalence": 0.001065377972867324,
+        "AP_raw_score": 0.0006951188365077338,
+        "AP_inverted_score_diagnostic_only": 0.001750552776070825,
+        "ROC_AUC_raw_score": 0.3078502104161075,
+        "ROC_AUC_inverted_score_diagnostic_only": 0.6921497895838925,
+        "mean_score_positive": 0.18104458630925074,
+        "mean_score_negative": 0.22847754209142102,
+        "median_score_positive": 0.17186670005321503,
+        "median_score_negative": 0.22234831005334854,
+        "score_std_all": 0.08234505378937303,
+        "score_min": 0.010801800526678562,
+        "score_max": 0.4622345268726349
+      },
+      {
+        "method": "TA-DPFL-Policy-U",
+        "validation_n": 1015602,
+        "validation_positives": 1082,
+        "validation_prevalence": 0.001065377972867324,
+        "AP_raw_score": 0.0006951396968970814,
+        "AP_inverted_score_diagnostic_only": 0.0017503062197587634,
+        "ROC_AUC_raw_score": 0.3078718736843072,
+        "ROC_AUC_inverted_score_diagnostic_only": 0.6921281263156929,
+        "mean_score_positive": 0.18071125296259544,
+        "mean_score_negative": 0.22815099222903204,
+        "median_score_positive": 0.17154087871313095,
+        "median_score_negative": 0.22199882566928864,
+        "score_std_all": 0.0823654302785566,
+        "score_min": 0.010735010728240013,
+        "score_max": 0.46199989318847656
+      }
+    ],
+    "gradient_direction_audits": {
+      "gradient_audit_ta_policy_u": {
+        "diagnostic": "noise_free_per_example_gradient_direction_audit",
+        "warning": "Local mechanism diagnostic only. It is not a DP run, not a privacy proof, and not an evaluation result. It uses sampled TRAIN rows and writes only aggregate statistics.",
+        "config": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\configs\\partial_dp_server_fedavg_20261103_225611_73aa74.yaml",
+        "checkpoint": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\outputs\\partial_dp_server_fedavg_20261103_225611_73aa74\\checkpoints\\ta_dpfl_policy_u_seed2026.pt",
+        "method": "ta_policy_u",
+        "seed": 2026,
+        "device": "cuda",
+        "training_rows": 3046861,
+        "training_positive_rows": 2297,
+        "training_background_rows": 3044564,
+        "feature_count": 53,
+        "label_group_mismatches_full_frame": 0,
+        "label_group_mismatches_training": 0,
+        "declared_positive_groups": [
+          "BIPARTITE",
+          "CYCLE",
+          "FAN-IN",
+          "FAN-OUT",
+          "GATHER-SCATTER",
+          "RANDOM",
+          "SCATTER-GATHER",
+          "STACK",
+          "UNCL"
+        ],
+        "clip_norm": 1.0,
+        "normalization": 128.0,
+        "learning_rate": 0.001,
+        "sampled_diagnostic_rows_per_class": 128,
+        "class_diagnostics": {
+          "positive": {
+            "sample_count": 128,
+            "mean_loss_before": 1.7495758533477783,
+            "mean_loss_after_noise_free_step": 1.7444381713867188,
+            "loss_reduction": 0.00513768196105957,
+            "mean_logit_before": -1.546807050704956,
+            "mean_logit_after_noise_free_step": -1.54062819480896,
+            "mean_logit_change": 0.006178855895996094,
+            "mean_raw_gradient_norm": 5.449120371602476,
+            "fraction_examples_clipped": 1.0,
+            "mean_clipped_gradient_norm": 0.9695442914962769,
+            "update_was_loss_improving": true
+          },
+          "background": {
+            "sample_count": 128,
+            "mean_loss_before": 0.2798945903778076,
+            "mean_loss_after_noise_free_step": 0.2790290117263794,
+            "loss_reduction": 0.0008655786514282227,
+            "mean_logit_before": -1.2440385818481445,
+            "mean_logit_after_noise_free_step": -1.2485430240631104,
+            "mean_logit_change": -0.00450444221496582,
+            "mean_raw_gradient_norm": 1.0512980371713638,
+            "fraction_examples_clipped": 0.703125,
+            "mean_clipped_gradient_norm": 0.8867847919464111,
+            "update_was_loss_improving": true
+          }
+        },
+        "interpretation_checks": {
+          "label_group_mapping_consistent": true,
+          "positive_step_reduces_positive_loss": true,
+          "background_step_reduces_background_loss": true,
+          "positive_step_raises_positive_logit": true,
+          "background_step_lowers_background_logit": true
+        }
+      },
+      "gradient_audit_uniform": {
+        "diagnostic": "noise_free_per_example_gradient_direction_audit",
+        "warning": "Local mechanism diagnostic only. It is not a DP run, not a privacy proof, and not an evaluation result. It uses sampled TRAIN rows and writes only aggregate statistics.",
+        "config": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\configs\\partial_dp_server_fedavg_20261103_225611_73aa74.yaml",
+        "checkpoint": "D:\\Study\\Academics\\Research and Others\\Capstone_2027\\TA-DPFL_RTX5050_Windows11_Optimized\\TA-DPFL_bundle\\outputs\\partial_dp_server_fedavg_20261103_225611_73aa74\\checkpoints\\uniform_dp_fl_seed2026.pt",
+        "method": "uniform",
+        "seed": 2026,
+        "device": "cuda",
+        "training_rows": 3046861,
+        "training_positive_rows": 2297,
+        "training_background_rows": 3044564,
+        "feature_count": 53,
+        "label_group_mismatches_full_frame": 0,
+        "label_group_mismatches_training": 0,
+        "declared_positive_groups": [
+          "BIPARTITE",
+          "CYCLE",
+          "FAN-IN",
+          "FAN-OUT",
+          "GATHER-SCATTER",
+          "RANDOM",
+          "SCATTER-GATHER",
+          "STACK",
+          "UNCL"
+        ],
+        "clip_norm": 1.0,
+        "normalization": 128.0,
+        "learning_rate": 0.001,
+        "sampled_diagnostic_rows_per_class": 128,
+        "class_diagnostics": {
+          "positive": {
+            "sample_count": 128,
+            "mean_loss_before": 1.747469425201416,
+            "mean_loss_after_noise_free_step": 1.7423352003097534,
+            "loss_reduction": 0.005134224891662598,
+            "mean_logit_before": -1.5442681312561035,
+            "mean_logit_after_noise_free_step": -1.5380910634994507,
+            "mean_logit_change": 0.006177067756652832,
+            "mean_raw_gradient_norm": 5.443952648900449,
+            "fraction_examples_clipped": 1.0,
+            "mean_clipped_gradient_norm": 0.9698317050933838,
+            "update_was_loss_improving": true
+          },
+          "background": {
+            "sample_count": 128,
+            "mean_loss_before": 0.28032946586608887,
+            "mean_loss_after_noise_free_step": 0.27946218848228455,
+            "loss_reduction": 0.0008672773838043213,
+            "mean_logit_before": -1.2419071197509766,
+            "mean_logit_after_noise_free_step": -1.2464122772216797,
+            "mean_logit_change": -0.004505157470703125,
+            "mean_raw_gradient_norm": 1.0533370091579854,
+            "fraction_examples_clipped": 0.7109375,
+            "mean_clipped_gradient_norm": 0.8868852257728577,
+            "update_was_loss_improving": true
+          }
+        },
+        "interpretation_checks": {
+          "label_group_mapping_consistent": true,
+          "positive_step_reduces_positive_loss": true,
+          "background_step_reduces_background_loss": true,
+          "positive_step_raises_positive_logit": true,
+          "background_step_lowers_background_logit": true
+        }
+      }
+    }
+  },
+  "interpretation": {
+    "detection": "Ranking is below chance for at least one method; do not claim successful AML detection.",
+    "typology_aware_utility": "No demonstrated overall AP lift over prevalence in this run.",
+    "privacy": "The RDP numerical cross-check is accountant validation, not independent end-to-end DP certification. Report transaction-level add/remove scope and composition across jointly released models.",
+    "design_limitations": [
+      "256 hashed virtual clients are a simulation, not 256 independently participating institutions.",
+      "Single-seed comparisons are descriptive, not evidence of statistical significance.",
+      "Validation/test records and separately released raw dataset audits are outside the training-record DP claim.",
+      "Do not invert scores, alter thresholds, or tune on the test set based on these diagnostics."
+    ]
+  },
+  "missing_artifacts": []
+}

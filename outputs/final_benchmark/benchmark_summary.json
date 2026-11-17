@@ -1,0 +1,262 @@
+{
+  "evaluation_split": "test",
+  "test_samples": 1015882,
+  "test_positives": 1798,
+  "test_prevalence": 0.0017698905430734158,
+  "master_results": [
+    {
+      "Method / Architecture": "Central-NN (v2 Matched Weight)",
+      "Privacy (\u03b5)": "Non-private",
+      "Optimizer": "AdamW",
+      "ROC-AUC": "0.941815",
+      "AP": "0.074141",
+      "AP / Prev": "41.89x",
+      "Mean Pos": "0.3207",
+      "Mean Neg": "0.0235"
+    },
+    {
+      "Method / Architecture": "Central-NN (v2 Unweighted)",
+      "Privacy (\u03b5)": "Non-private",
+      "Optimizer": "AdamW",
+      "ROC-AUC": "0.939056",
+      "AP": "0.082778",
+      "AP / Prev": "46.77x",
+      "Mean Pos": "0.0262",
+      "Mean Neg": "0.0015"
+    },
+    {
+      "Method / Architecture": "FedAdam (Non-private Seed 2026)",
+      "Privacy (\u03b5)": "Non-private",
+      "Optimizer": "FedAdam",
+      "ROC-AUC": "0.938003",
+      "AP": "0.085881",
+      "AP / Prev": "48.52x",
+      "Mean Pos": "0.0194",
+      "Mean Neg": "0.0008"
+    },
+    {
+      "Method / Architecture": "FedAvg (Non-private Seed 2026)",
+      "Privacy (\u03b5)": "Non-private",
+      "Optimizer": "FedAvg",
+      "ROC-AUC": "0.279561",
+      "AP": "0.001114",
+      "AP / Prev": "0.63x",
+      "Mean Pos": "0.0031",
+      "Mean Neg": "0.0163"
+    },
+    {
+      "Method / Architecture": "Uniform-DP-FL (FedAvg Server - Collapsed)",
+      "Privacy (\u03b5)": "eps = 4.0",
+      "Optimizer": "FedAvg",
+      "ROC-AUC": "0.275229",
+      "AP": "0.001109",
+      "AP / Prev": "0.63x",
+      "Mean Pos": "0.1723",
+      "Mean Neg": "0.2283"
+    },
+    {
+      "Method / Architecture": "TA-DPFL-Policy-U (FedAvg Server - Collapsed)",
+      "Privacy (\u03b5)": "eps = 4.0",
+      "Optimizer": "FedAvg",
+      "ROC-AUC": "0.275244",
+      "AP": "0.001109",
+      "AP / Prev": "0.63x",
+      "Mean Pos": "0.1720",
+      "Mean Neg": "0.2279"
+    },
+    {
+      "Method / Architecture": "Uniform-DP-FL (Fixed)",
+      "Privacy (\u03b5)": "eps = 4.0",
+      "Optimizer": "FedAdam + Prior",
+      "ROC-AUC": "0.831855",
+      "AP": "0.005801",
+      "AP / Prev": "3.28x",
+      "Mean Pos": "0.0045",
+      "Mean Neg": "0.0018"
+    },
+    {
+      "Method / Architecture": "Individualized-DP-SGD (Fixed)",
+      "Privacy (\u03b5)": "eps in [2, 4]",
+      "Optimizer": "FedAdam + Prior",
+      "ROC-AUC": "0.814699",
+      "AP": "0.015094",
+      "AP / Prev": "8.53x",
+      "Mean Pos": "0.0024",
+      "Mean Neg": "0.0005"
+    },
+    {
+      "Method / Architecture": "TA-DPFL Policy U (Fixed)",
+      "Privacy (\u03b5)": "eps = 4.0",
+      "Optimizer": "FedAdam + Prior",
+      "ROC-AUC": "0.895460",
+      "AP": "0.014488",
+      "AP / Prev": "8.19x",
+      "Mean Pos": "0.0093",
+      "Mean Neg": "0.0019"
+    },
+    {
+      "Method / Architecture": "TA-DPFL Policy D (Fixed)",
+      "Privacy (\u03b5)": "eps in [2, 4]",
+      "Optimizer": "FedAdam + Prior",
+      "ROC-AUC": "0.887269",
+      "AP": "0.012165",
+      "AP / Prev": "6.87x",
+      "Mean Pos": "0.0071",
+      "Mean Neg": "0.0020"
+    }
+  ],
+  "policy_typology_breakdown": {
+    "uniform_dp": {
+      "CYCLE": {
+        "auc": 0.8634328385079585,
+        "ap": 0.0003850660930059154
+      },
+      "GATHER-SCATTER": {
+        "auc": 0.8744320095525246,
+        "ap": 0.001574948869139087
+      },
+      "BIPARTITE": {
+        "auc": 0.8653225805591882,
+        "ap": 0.0002911698699829665
+      },
+      "FAN-OUT": {
+        "auc": 0.8644014802662163,
+        "ap": 0.000518376614864064
+      },
+      "SCATTER-GATHER": {
+        "auc": 0.8775384077947771,
+        "ap": 0.0010005398946060509
+      },
+      "STACK": {
+        "auc": 0.8591308827896478,
+        "ap": 0.0005043590017895029
+      },
+      "RANDOM": {
+        "auc": 0.8707538664977343,
+        "ap": 0.0003452803162051852
+      },
+      "FAN-IN": {
+        "auc": 0.8690931123141961,
+        "ap": 0.0005443282789716307
+      },
+      "UNCL": {
+        "auc": 0.7200350438713103,
+        "ap": 0.0009359101624806515
+      }
+    },
+    "individualized_dp": {
+      "CYCLE": {
+        "auc": 0.8759079328571264,
+        "ap": 0.002773764913425375
+      },
+      "GATHER-SCATTER": {
+        "auc": 0.8318308336904238,
+        "ap": 0.0034755010817756078
+      },
+      "BIPARTITE": {
+        "auc": 0.8792852612454835,
+        "ap": 0.0012408063018060714
+      },
+      "FAN-OUT": {
+        "auc": 0.879067185614942,
+        "ap": 0.0034163219441875406
+      },
+      "SCATTER-GATHER": {
+        "auc": 0.8392017715354095,
+        "ap": 0.0034339677102571543
+      },
+      "STACK": {
+        "auc": 0.8521296805787292,
+        "ap": 0.0013244115151276295
+      },
+      "RANDOM": {
+        "auc": 0.8680422086496573,
+        "ap": 0.0015675233073659592
+      },
+      "FAN-IN": {
+        "auc": 0.8560099521838083,
+        "ap": 0.0009803374546410372
+      },
+      "UNCL": {
+        "auc": 0.7079582328068821,
+        "ap": 0.0015710816459778836
+      }
+    },
+    "policy_u": {
+      "CYCLE": {
+        "auc": 0.9353496682991971,
+        "ap": 0.0009727448615013587
+      },
+      "GATHER-SCATTER": {
+        "auc": 0.9413858447058068,
+        "ap": 0.004191737165854463
+      },
+      "BIPARTITE": {
+        "auc": 0.924930381853329,
+        "ap": 0.0006400309852338921
+      },
+      "FAN-OUT": {
+        "auc": 0.9322333504916752,
+        "ap": 0.0013106593643137142
+      },
+      "SCATTER-GATHER": {
+        "auc": 0.951194515334912,
+        "ap": 0.003631419274746023
+      },
+      "STACK": {
+        "auc": 0.9278999746146699,
+        "ap": 0.0013595278403109616
+      },
+      "RANDOM": {
+        "auc": 0.9390827091246879,
+        "ap": 0.0008309410340308776
+      },
+      "FAN-IN": {
+        "auc": 0.9198028002805567,
+        "ap": 0.001027060489892643
+      },
+      "UNCL": {
+        "auc": 0.7739656378905895,
+        "ap": 0.0019049767872989774
+      }
+    },
+    "policy_d": {
+      "CYCLE": {
+        "auc": 0.9344601006398363,
+        "ap": 0.0009523698314970292
+      },
+      "GATHER-SCATTER": {
+        "auc": 0.9364580987014794,
+        "ap": 0.003501113540703625
+      },
+      "BIPARTITE": {
+        "auc": 0.91878163619262,
+        "ap": 0.0006145399212631466
+      },
+      "FAN-OUT": {
+        "auc": 0.9159594555987753,
+        "ap": 0.0010354776859842758
+      },
+      "SCATTER-GATHER": {
+        "auc": 0.9280560659074422,
+        "ap": 0.002256935782247103
+      },
+      "STACK": {
+        "auc": 0.9284438503826395,
+        "ap": 0.0013186125213106685
+      },
+      "RANDOM": {
+        "auc": 0.9265019718104175,
+        "ap": 0.0009365043313207513
+      },
+      "FAN-IN": {
+        "auc": 0.9311896613065095,
+        "ap": 0.0010335889979394767
+      },
+      "UNCL": {
+        "auc": 0.7638439767688777,
+        "ap": 0.0015633377395475557
+      }
+    }
+  }
+}

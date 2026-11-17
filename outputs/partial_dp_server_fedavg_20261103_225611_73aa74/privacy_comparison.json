@@ -1,0 +1,45 @@
+{
+  "accounting_protocol": "exact public partial participation; per-record composition at the owning virtual client; no client-subsampling amplification credited",
+  "composition_repetitions_per_method": 1,
+  "regime_a_setup_satisfied": true,
+  "privacy_matching_tolerance": 0.02,
+  "global_epsilon_bounds_per_method_across_configured_seeds": {
+    "uniform_dp": 4.0000000000000036,
+    "individualized_dp": 4.0000000000000036,
+    "ta_policy_u": 4.0,
+    "ta_policy_d": 4.00000000000006
+  },
+  "matched_maximum_privacy_cap_per_method": true,
+  "joint_release_all_enabled_dp_methods_and_seeds": {
+    "global_epsilon_joint_release": 4.31586385120953,
+    "worst_record_location": {
+      "client_id": "VC0013",
+      "stratum": "FAN-IN",
+      "best_order": 6
+    },
+    "delta": 1e-08,
+    "orders": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32,
+      40,
+      48,
+      64,
+      96,
+      128
+    ],
+    "number_of_composed_methods": 2,
+    "warning": "This is the bound for releasing all listed method outputs together; it is not the per-method comparison bound."
+  },
+  "joint_release_warning": "Each method is calibrated to its own matched cap across its configured seeds. If checkpoints from multiple DP methods are released together, their privacy losses compose; consult joint_release_all_enabled_dp_methods_and_seeds.",
+  "interpretation": "Per-method matched-cap comparison"
+}
