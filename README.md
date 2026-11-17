@@ -186,14 +186,4 @@ Checkpoints are saved to `outputs/fixed_dp_model.pt`.
 
 ---
 
-## Citation & References
-
-```bibtex
-@article{tadpfl2026,
-  title={Typology-Aware Privacy Scheduling for Differentially Private Federated AML Transaction Detection},
-  author={TA-DPFL Research Group},
-  year={2026}
-}
-```
-
 For detailed mathematical derivations, diagnostic logs, and evidence audits, see [`FINAL_PROJECT_EVIDENCE_AND_FINDINGS_REPORT.md`](FINAL_PROJECT_EVIDENCE_AND_FINDINGS_REPORT.md).
